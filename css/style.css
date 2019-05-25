@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: url(../img/2.jpg);
+}
+/*第一个div*/
+/*大转盘*/
+div:nth-child(1){
+	width: 768px;
+	height: 768px;
+	background: url(../img/fsw.png);
+	position: absolute;
+    left: 50%;	
+    margin-left: -384px;
+    /*z-index: 1;*/
+   /*设置动画:动画名称 动画执行时间 动画类型*/
+   animation: rot 10s infinite linear;
+}
+/*实现动画*/
+@keyframes rot{
+	0%{}
+	
+	100%{transform: rotate(360deg);}
+}
+div:nth-child(2){
+	width: 247px;
+	height: 490px;
+	background: url(../img/bracketsmall.png);
+	position: absolute;
+    left: 50%;	
+    margin-left: -123px;
+    top: 384px;
+    /*调节层级关系*/
+    z-index: -1;
+}
+div:nth-child(3){
+	width: 358px;
+	height: 529px;
+	background: url(../img/bracket.png);
+	position: absolute;
+    left: 50%;	
+    margin-left: -179px;
+    top: 371px;
+}
+div:nth-child(4){
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	
+	background: url(../img/1.gif);
+	background-size: 100% 100%;
+	/*内边距,元素本身会变大*/
+	/*外边距:1个参数:上下左右;
+	      2个参数:上下 左右;
+	      3个参数:上 左右 下;
+	      4个参数：上 右 下 左（顺时针转）*/
+	margin: 100px auto;
+	/*边框*/
+	/*实线,虚线*/
+	border: 10px solid green; 
+	/*border: 10px dashed green;*/
+    /*圆角*/
+    /*border-radius: 20px;*/
+    border-radius: 50%;
+     /*阴影:X轴的偏移量 X轴的偏移量 虚化度*/
+    /*box-shadow: 10px 10px 10px black;*/
+    transition: all 1s;
+    z-index: 1;
+    left: 50%;
+	margin-left: -111px;
+	top: 169px;
+}
+div:nth-child(5){
+	width: 412px;
+	height: 139px;
+	background: url(../img/title.png);
+	position: absolute;
+	left: 50%;
+	margin-left: -206px;
+	top: 455px;
+	z-index: 2;
+}
+li{
+	width: 130px;
+	height: 170px;
+	position: absolute;
+	/*去掉无序列表的小黑点*/
+	list-style: none;
+	animation: per 10s infinite linear;
+	/*调整旋转基点*/
+	transform-origin: 50% 40%;
+}
+@keyframes per{
+	from{}
+	to{transform: rotate(-360deg);}
+}
+li:nth-child(1){
+	background: url(../img/girl.png);
+	left: 55px;
+	top: 100px;	
+}
+li:nth-child(2){
+	background: url(../img/girls.png);
+	left: 319px;
+	top: 0px;
+}
+li:nth-child(3){
+	background: url(../img/dog.png);
+	left: 580px;
+	top: 85px;
+}
+li:nth-child(4){
+	background: url(../img/boy.png);
+	left: 665px;
+	top: 350px;
+}
+li:nth-child(5){
+	background: url(../img/mimi.png);
+	left: 0px;
+	top: 350px;
+}
+li:nth-child(6){
+	background: url(../img/mudog.png);
+	left: 90px;
+	top: 590px;
+}
+li:nth-child(7){
+	background: url(../img/hairboy.png);
+	left: 327px;
+	top: 685px;
+}
+li:nth-child(8){
+	background: url(../img/shamegirl.png);
+	left: 590px;
+	top: 540px;
+}
+div:nth-child(4):hover{
+	/*旋转*/
+	transform: rotate(3600deg) scale(2);
+	/*缩放*/
+	/*transform: scale(1.5);*/
+	/*background: url(../img/b.jpg);
+	background-size: 100% 100%;*/
+	
+}
+li:nth-child(9){
+	
+}
